@@ -1,0 +1,63 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Client",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/out/bin/client",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build client",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "logging": {
+                "trace": true,
+                "traceResponse": true,
+                "engineLogging": true,
+                "programOutput": true,
+                "moduleLoad": true,
+                "exceptions": true
+            }
+        },
+        {
+            "name": "Debug Server",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/out/bin/server",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build server",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "logging": {
+                "trace": true,
+                "traceResponse": true,
+                "engineLogging": true,
+                "programOutput": true,
+                "moduleLoad": true,
+                "exceptions": true
+            }
+        }
+    ]
+}

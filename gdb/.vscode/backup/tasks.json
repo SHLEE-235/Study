@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build client",
+            "type": "shell",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}/client/client.cpp",
+                "${workspaceFolder}/mylib/mylib.cpp",
+                "-o",
+                "${workspaceFolder}/client/client"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "compiler: /usr/bin/g++"
+        },
+        {
+            "label": "build server",
+            "type": "shell",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}/server/server.cpp",
+                "${workspaceFolder}/mylib/mylib.cpp",
+                "-o",
+                "${workspaceFolder}/server/server"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "compiler: /usr/bin/g++"
+        }
+    ]
+}
